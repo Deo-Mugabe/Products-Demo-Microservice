@@ -1,0 +1,5 @@
+TestContainer for java
+
+copy the managment dependencies
+
+copy the database container maven dependency
