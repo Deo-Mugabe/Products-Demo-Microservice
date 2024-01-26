@@ -1,10 +1,6 @@
-package org.deomugabe.productservice.model;
+package org.deomugabe.orderservice.model;
 
-
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,13 +9,16 @@ import java.math.BigDecimal;
 
 @Entity
 @Data
+@Table(name = "t_order_line_items")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class OrderLineItems {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Long id;
-    private String name;
-    private String description;
+    private String skuCode;
     private BigDecimal price;
+    private Integer quantity;
 }
